@@ -7,7 +7,6 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 
-//import java.io.Serializable;
 @Entity
 @Table(name="tbl_Item")
 public class Items implements Serializable{

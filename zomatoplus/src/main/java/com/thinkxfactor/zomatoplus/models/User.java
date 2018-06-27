@@ -32,7 +32,7 @@ public class User implements Serializable{
 	@GeneratedValue //auto-increment
 	private Long id;
 	
-	@Column(name="name")
+	@Column(name="name",unique=true)
 	private String name;
 	
 	@Column(name="type")

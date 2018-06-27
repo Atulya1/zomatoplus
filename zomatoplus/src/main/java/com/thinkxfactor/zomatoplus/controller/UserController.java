@@ -33,6 +33,13 @@ public class UserController {
 		List<User> users=userRepository.findAll();
 		return users;
 	}
+	
+	@PostMapping("/login")
+	public User login(@RequestBody User user) {
+		
+		User loggedUser=userRepository.findByNameAndPassword(user.getName(), user.getPassword());
+		return loggedUser;
+	}
 	/*@GetMapping("/create")
 	public User create(@RequestParam(value="username") String username,@RequestParam(value="password")String password) 
 	{
